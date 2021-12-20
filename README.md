@@ -1,6 +1,9 @@
 # Attr2Font
 
 junho eddit
+```
+conda install pytorch==1.0.0 torchvision==0.2.1 cuda100 -c pytorch
+```
 
 ## Introduction
 
