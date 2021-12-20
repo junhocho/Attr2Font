@@ -1,4 +1,7 @@
 # Attr2Font
+
+junho eddit
+
 ## Introduction
 
 This is the official PyTorch implementation of the **Attribute2Font: Creating Fonts You Want From Attributes**.
