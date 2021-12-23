@@ -89,7 +89,7 @@ def train(opts):
     if opts.init_epoch > 1:
         gen_file = os.path.join(checkpoint_dir, f"G_{opts.init_epoch}.pth")
         attr_unsuper_file = os.path.join(checkpoint_dir, f"attr_unsuper_embed_{opts.init_epoch}.pth")
-        attribute_embed_file = os.path.join(checkpoint_dir, f"attribute_embed_{opts.init_epoch}")
+        attribute_embed_file = os.path.join(checkpoint_dir, f"attribute_embed_{opts.init_epoch}.pth")
         dis_file = os.path.join(checkpoint_dir, f"D_{opts.init_epoch}.pth")
 
         generator.load_state_dict(torch.load(gen_file))
@@ -565,7 +565,7 @@ def main():
     if opts.phase == 'train':
         # Create directories
         log_dir = os.path.join("experiments", opts.experiment_name)
-        os.makedirs(log_dir, exist_ok=False)  # False to prevent multiple train run by mistake
+        os.makedirs(log_dir, exist_ok=True)  # False to prevent multiple train run by mistake
         os.makedirs(os.path.join(log_dir, "samples"), exist_ok=True)
         os.makedirs(os.path.join(log_dir, "checkpoint"), exist_ok=True)
         os.makedirs(os.path.join(log_dir, "results"), exist_ok=True)
